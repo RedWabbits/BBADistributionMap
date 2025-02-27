@@ -1,0 +1,1349 @@
+var locations = {
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.09515586,42.32102462 ]
+     },
+     "properties": {
+     "Name":"Mexico Town Bakery",
+     "Address":"4300 Vernor Hwy, Detroit, MI 48209",
+     "Place":"Bakery",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"They have a bulletin",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.18310755,42.32063137 ]
+     },
+     "properties": {
+     "Name":"Roti Max Bakery",
+     "Address":"14430 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Bakery",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Gave to cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.2817903,42.65867687 ]
+     },
+     "properties": {
+     "Name":"Sheila's Bakery",
+     "Address":"800 Perry St, Pontiac, MI 48342",
+     "Place":"Bakery",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.29903638,42.63562394 ]
+     },
+     "properties": {
+     "Name":"La Casa Amiga",
+     "Address":"76 Williams St, Pontiac, MI 48341",
+     "Place":"Business",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.280649,42.67378593 ]
+     },
+     "properties": {
+     "Name":"All Saints Episcopal Church",
+     "Address":"171 W Pike St, Pontiac, MI 48341",
+     "Place":"Church",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.10271399,42.31205528 ]
+     },
+     "properties": {
+     "Name":"Detroit Cavalry Spanish SDA",
+     "Address":"1227 Cavalry St, Detroit, MI 48209",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1240762,42.3361795 ]
+     },
+     "properties": {
+     "Name":"First Baptish Spanish Church",
+     "Address":"3495 Livernois, Detroit, MI 48210",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.09484326,42.32271209 ]
+     },
+     "properties": {
+     "Name":"First Latin American Baptist Church",
+     "Address":"2004 Scotten St, Detroit, MI 48209",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05383662,42.32771365 ]
+     },
+     "properties": {
+     "Name":"Fort Street Presbyterian Church",
+     "Address":"631 W Fort St, Detroit, MI 48226",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.04198247,42.3293591 ]
+     },
+     "properties": {
+     "Name":"Mariners' Church",
+     "Address":"170 E Jefferson Ave, Detroit, MI 48226",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05031625,42.34490761 ]
+     },
+     "properties": {
+     "Name":"Motor City Church",
+     "Address":"150 Michigan Ave, Detroit, MI 48226",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.04026772,42.3363031 ]
+     },
+     "properties": {
+     "Name":"Old St. Mary's Catholic Church",
+     "Address":"646 Monroe St, Detroit, MI 48226",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.04551956,42.3525182 ]
+     },
+     "properties": {
+     "Name":"Sacred Heart Catholic Church",
+     "Address":"1000 Eliot St, Detroit, MI 48207",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.10762484,42.31663904 ]
+     },
+     "properties": {
+     "Name":"Santos Church",
+     "Address":"1953 Military St, Detroit, MI 48209",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.04984821,42.33942503 ]
+     },
+     "properties": {
+     "Name":"St Aloysius Parish",
+     "Address":"1234 Washington Blvd, Detroit, MI 48226",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.117502,42.33441086 ]
+     },
+     "properties": {
+     "Name":"St Francis D'Assisi Church",
+     "Address":"4500 Wesson St, Detroit, MI 48210",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.13146588,42.35666153 ]
+     },
+     "properties": {
+     "Name":"St Gabriel's Catholic Church",
+     "Address":"8118 W, 8118 Vernor Hwy, Detroit, MI 48209",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1155372,42.48244456 ]
+     },
+     "properties": {
+     "Name":"St. Hedwig Catholic Church",
+     "Address":"3245 Junction Ave, Detroit, MI 48210",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.09491024,42.50981371 ]
+     },
+     "properties": {
+     "Name":"St. Joseph Shrine",
+     "Address":"1828 Jay St, Detroit, MI 48207",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.10510282,42.31873793 ]
+     },
+     "properties": {
+     "Name":"Templo el Calvario",
+     "Address":"2101 Campbell St, Detroit, MI 48209",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06375922,42.3568485 ]
+     },
+     "properties": {
+     "Name":"The Cathedral Church of St. Paul",
+     "Address":"4800 Woodward Ave, Detroit, MI 48201",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06168196,42.35575092 ]
+     },
+     "properties": {
+     "Name":"Woodside Bible CHurch",
+     "Address":"80 W Alexandrine St, Detroit, MI 48201",
+     "Place":"Church",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.19843419,42.41019918 ]
+     },
+     "properties": {
+     "Name":"Club Caribbean",
+     "Address":"15331 Fenkell Ave, Detroit, MI 48227",
+     "Place":"Club",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05461197,42.35183081 ]
+     },
+     "properties": {
+     "Name":"Children's Hospital of Michigan",
+     "Address":"3901 Beaubien Blvd, Detroit, MI 48201",
+     "Place":"Hospital",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05496536,42.35357429 ]
+     },
+     "properties": {
+     "Name":"DMC Detroit Receiving Hospital",
+     "Address":"4201 St Antoine, Detroit, MI 48201",
+     "Place":"Hospital",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05639157,42.35199643 ]
+     },
+     "properties": {
+     "Name":"DMC Harper University Hospital",
+     "Address":"3990 John R St, Detroit, MI 48201",
+     "Place":"Hospital",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.18216214,42.41878856 ]
+     },
+     "properties": {
+     "Name":"DMC Sinai Grace Hospital",
+     "Address":"6071 Outer Dr W, Detroit, MI 48235",
+     "Place":"Hospital",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.08534332,42.36758264 ]
+     },
+     "properties": {
+     "Name":"Henry Ford Hospital",
+     "Address":"2799 W Grand Blvd, Detroit, MI 48202",
+     "Place":"Hospital",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.04722301,42.33772865 ]
+     },
+     "properties": {
+     "Name":"Detroit Athletic Club",
+     "Address":"241 Madison St, Detroit, MI 48226",
+     "Place":"Hotel",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.04001366,42.33627791 ]
+     },
+     "properties": {
+     "Name":"Greektown Casino",
+     "Address":"1211 Chrysler Dr, Detroit, MI 48226",
+     "Place":"Hotel",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24. Casino managers can be very reactive.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.29962462,42.49275329 ]
+     },
+     "properties": {
+     "Name":"Hilton Southfield",
+     "Address":"26000 American Dr, Southfield, MI 48034",
+     "Place":"Hotel",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05470774,42.37716023 ]
+     },
+     "properties": {
+     "Name":"MGM Casino",
+     "Address":"1777 3rd Ave, Detroit, MI 48226",
+     "Place":"Hotel",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24. Casino managers can be very reactive.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06775635,42.33903955 ]
+     },
+     "properties": {
+     "Name":"Motorcity Casino",
+     "Address":"2901 Grand River Ave, Detroit, MI 48201",
+     "Place":"Hotel",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24. Casino managers can be very reactive.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.05027798,42.33229882 ]
+     },
+     "properties": {
+     "Name":"Westin Book Cadillac",
+     "Address":"1114 Washington Blvd, Detroit, MI 48226",
+     "Place":"Hotel",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24. High Immigrant Population",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.08904768,42.32356977 ]
+     },
+     "properties": {
+     "Name":"Bowen Public Library",
+     "Address":"3648 Vernor Hwy, Detroit, MI 48216",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.13308769,42.30909963 ]
+     },
+     "properties": {
+     "Name":"Campbell Public Library",
+     "Address":"8733 W Vernor Hwy, Detroit, MI 48209",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -82.97393362,42.40192618 ]
+     },
+     "properties": {
+     "Name":"Chandler Park",
+     "Address":"12800 Harper Ave, Detroit, MI 48213",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.20528061,42.39556388 ]
+     },
+     "properties": {
+     "Name":"Chaney",
+     "Address":"16101 Grand River Ave, Detroit, MI 48227",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.21787606,42.42999775 ]
+     },
+     "properties": {
+     "Name":"Chase ",
+     "Address":"17731 W Seven Mile Rd, Detroit, MI 48235",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.12730708,42.3320621 ]
+     },
+     "properties": {
+     "Name":"Conely",
+     "Address":"4600 Martin St, Detroit, MI 48210",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06682229,42.35869702 ]
+     },
+     "properties": {
+     "Name":"Detroit Public Library",
+     "Address":"5201 Woodward Ave, Detroit, MI 48202",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.07464828,42.34334124 ]
+     },
+     "properties": {
+     "Name":"Douglass",
+     "Address":"3666 Grand River Ave, Detroit, MI 48208",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.09331186,42.36333701 ]
+     },
+     "properties": {
+     "Name":"Duffield",
+     "Address":"2507 W Grand Blvd, Detroit, MI 48208",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.22052094,42.3581958 ]
+     },
+     "properties": {
+     "Name":"Edison",
+     "Address":"18400 Joy Rd, Detroit, MI 48228",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.02341881,42.34018575 ]
+     },
+     "properties": {
+     "Name":"Elmwood Park",
+     "Address":"550 Chene St, Detroit, MI 48207",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -82.98408693,42.42716143 ]
+     },
+     "properties": {
+     "Name":"Franklin",
+     "Address":"13651 E McNichols Rd, Detroit, MI 48205",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17270318,42.41653401 ]
+     },
+     "properties": {
+     "Name":"Hubbard",
+     "Address":"12929 W McNichols Rd, Detroit, MI 48235",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -82.93720283,42.40428882 ]
+     },
+     "properties": {
+     "Name":"Jefferson",
+     "Address":"12350 Outer Dr E, Detroit, MI 48224",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06036662,42.41479589 ]
+     },
+     "properties": {
+     "Name":"Knapp",
+     "Address":"13330 Conant, Detroit, MI 48212",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.09088719,42.4329503 ]
+     },
+     "properties": {
+     "Name":"Lincoln",
+     "Address":"1221 Seven Mile E, Highland Park, MI 48203",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.12741492,42.396871 ]
+     },
+     "properties": {
+     "Name":"Parkman",
+     "Address":"1766 Oakman Blvd, Detroit, MI 48238",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.25003139,42.41416383 ]
+     },
+     "properties": {
+     "Name":"Redford",
+     "Address":"21200 Grand River Ave, Detroit, MI 48219",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.14432284,42.43146859 ]
+     },
+     "properties": {
+     "Name":"Sherwood Forest",
+     "Address":"7117 W Seven Mile Rd, Detroit, MI 48221",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.03008154,42.43378811 ]
+     },
+     "properties": {
+     "Name":"Wilder",
+     "Address":"7140 Seven Mile E, Detroit, MI 48234",
+     "Place":"Library",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17662269,42.32240655 ]
+     },
+     "properties": {
+     "Name":"Arab American National Museum",
+     "Address":"13624 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Museum",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Added to Newstands",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.29345354,42.63982766 ]
+     },
+     "properties": {
+     "Name":"Centro Multicultural",
+     "Address":"91 N Saginaw St, Pontiac, MI 48342",
+     "Place":"Non Profit",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06382109,42.32675574 ]
+     },
+     "properties": {
+     "Name":"Detroit Hispanic Development",
+     "Address":"1211 Trumbull, Detroit, MI 48216",
+     "Place":"Non Profit",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.12738231,42.3014286 ]
+     },
+     "properties": {
+     "Name":"Latino Family Services",
+     "Address":"1145 Lawndale St, Detroit, MI 48209",
+     "Place":"Non Profit",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.34816245,42.2148766 ]
+     },
+     "properties": {
+     "Name":"DTW Airport Restaurants",
+     "Address":"12999 John D Dingell Dr, Detroit, MI 48242",
+     "Place":"Restaurant",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17864182,42.32175473 ]
+     },
+     "properties": {
+     "Name":"Haraz Coffee",
+     "Address":"13810 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Restaurant",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left flyers with barista",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.06276539,42.35037554 ]
+     },
+     "properties": {
+     "Name":"La Feria",
+     "Address":"4130 Cass Ave, Detroit, MI 48201",
+     "Place":"Restaurant",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -82.97376925,42.35787787 ]
+     },
+     "properties": {
+     "Name":"Sinbad's Restaurant",
+     "Address":"100 St Clair St, Detroit, MI 48214",
+     "Place":"Restaurant",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Unite Here Local 24.",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.29326871,42.63952502 ]
+     },
+     "properties": {
+     "Name":"Liberty Bar",
+     "Address":"85 N Saginaw St, Pontiac, MI 48342",
+     "Place":"Restaurant ",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17958298,42.32110672 ]
+     },
+     "properties": {
+     "Name":"Sheeba",
+     "Address":"13919 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Restaurant ",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Gave to cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.174235,42.32265874 ]
+     },
+     "properties": {
+     "Name":"[Arabic] Convenience ",
+     "Address":"13347 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left some with cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.07864193,42.32558522 ]
+     },
+     "properties": {
+     "Name":"Algo Especial Super Market",
+     "Address":"2628 Bagley St, Detroit, MI 48216",
+     "Place":"Store",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1730314,42.32337782 ]
+     },
+     "properties": {
+     "Name":"Azal Computer Cellphone",
+     "Address":"13234 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Gave to cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.12556757,42.31382868 ]
+     },
+     "properties": {
+     "Name":"Azteca Supermercado",
+     "Address":"2411 Central St, Detroit, MI 48209",
+     "Place":"Store",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.26016663,42.67923714 ]
+     },
+     "properties": {
+     "Name":"Carnival Market",
+     "Address":"1101 Walton Blvd., Pontiac, MI 48340",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17322112,42.32287309 ]
+     },
+     "properties": {
+     "Name":"Convenience Store",
+     "Address":"13255 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left with Cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1756966,42.32341502 ]
+     },
+     "properties": {
+     "Name":"Dar Alhajar",
+     "Address":"4940 Schaefer Rd, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left with Cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17692813,42.32449488 ]
+     },
+     "properties": {
+     "Name":"Dearborn Fresh Supermarket",
+     "Address":"13661 Colson St, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left 3 flyers by newsstand",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17586027,42.32380977 ]
+     },
+     "properties": {
+     "Name":"Dollar Land Plus Superstore",
+     "Address":"5000 Schaefer Rd, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left with Cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.10619039,42.31683394 ]
+     },
+     "properties": {
+     "Name":"E&L Supermercado",
+     "Address":"6000 Vernor Hwy, Detroit, MI 48209",
+     "Place":"Store",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1733165,42.32324873 ]
+     },
+     "properties": {
+     "Name":"Jungle Juice",
+     "Address":"13252 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left with Cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.14009074,42.33581025 ]
+     },
+     "properties": {
+     "Name":"La Luna Supermercado",
+     "Address":"7603 McGraw Ave, Detroit, MI 48210",
+     "Place":"Store",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17338539,42.32318266 ]
+     },
+     "properties": {
+     "Name":"Red Eye Smoke Shop",
+     "Address":"13254 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left with Cashier",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.17957733,42.32151983 ]
+     },
+     "properties": {
+     "Name":"Rouh Perfumes",
+     "Address":"4713 Horger St, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Gave to reception",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.18059867,42.32063959 ]
+     },
+     "properties": {
+     "Name":"Sanaa Express Mart",
+     "Address":"14227 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.3016826,42.67153793 ]
+     },
+     "properties": {
+     "Name":"Save-a-lot",
+     "Address":"1249 Baldwin Ave, Pontiac MI 48340",
+     "Place":"Store",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"Was told to come back when manager is there",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1753799,42.32222156 ]
+     },
+     "properties": {
+     "Name":"Sigma Phone Repairs",
+     "Address":"13535 Michigan ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Cashier took a handful",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.1795986,42.32139259 ]
+     },
+     "properties": {
+     "Name":"Sinbad Travel and Tours",
+     "Address":"13912 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Gave to reception",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.18050795,42.32073609 ]
+     },
+     "properties": {
+     "Name":"The Suit Company and Clothing",
+     "Address":"14207 Michigan Ave, Dearborn, MI 48126",
+     "Place":"Store",
+     "Has_Received":"Yes",
+     "Claimed":"",
+     "Notes":"Left arabic flyers",
+     "Contacted":"Yes"
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -83.13708942,42.33688756 ]
+     },
+     "properties": {
+     "Name":"Tobey's Market",
+     "Address":"5546 Chopin St, Detroit, MI 48210",
+     "Place":"Store",
+     "Has_Received":"No",
+     "Claimed":"",
+     "Notes":"",
+     "Contacted":"No"
+     }
+   }
+ ]
+ }

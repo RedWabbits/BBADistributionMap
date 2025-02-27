@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know Your Rights Choropleth</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map { height: 90%; width: 100%; }
+        .html{ background-color:#272626}
+        .info { padding: 3px 3px; background: rgb(43, 43, 43); border-radius: 5px; }
+        .legend { line-height: 18px; color: #131313; }
+        .legend i { width: 18px; height: 18px; float: left; margin-right: 0px; opacity: 0.7; }
+        .demographics{
+          font-size: 1em;
+        }
+        h1{
+          text-align: center;
+          color: #f5f5f5;
+        }
+        #datasetSelector{
+          text-align: center;
+          color: #000000;
+        }
+        body{
+          background-color: gray;
+          height: 1000px; width: 100%; 
+        }
+        li{
+          list-style-type: none;
+        }
+        .legendli{
+          list-style-type: none;
+          padding: 4px;
+          padding-right: 10px;
+        }
+        .legend-box{
+          padding: 6px;
+          margin: 2px;
+          background-color: transparent;
+        }
+        .legend-name{
+          color: rgb(247, 247, 247);
+        }
+        .pop_ups{
+          font-size: 1.2em;
+        }
+        .awesome-marker i {
+        font-size: 18px;
+        margin-top: 8px;
+        opacity: 100%;
+    }
+    .awesome-marker{
+      opacity: 95%;
+    }
+    </style>
+</head>
+<body>
+<h1>Know Your Rights Choropleth</h1>
+<div id="datasetSelector">
+  <label for="dataset">Select Census Data Point:</label>
+  <select id="dataset">
+      <option value="CITIZENBORNINUS">Citizen born in U.S</option>
+      <option value="PERCENTCITIZENBORNINUS">% Citizen born in U.S</option>
+      <option value="CITIZENBORNINPUERTORICOORUSISLANDAREAS">Citizen Born In Puerto Rico/Island Areas</option>
+      <option value="PERCENTCITIZENBORNINPUERTORICOORUSISLANDAREAS">% Citizen Born In Puerto Rico/Island Areas</option>
+      <option value="CITIZENBORNABROADOFAMERICANPARENTS">Citizens Born Abroad to American Parents</option>
+      <option value="PERCENTCITIZENBORNABROADOFAMERICANPARENTS">% Citizens Born Abroad to American Parents</option>
+      <option value="CITIZENBYNATURALIZATION">Citizen by Naturalization</option>
+      <option value="PERCENTCITIZENBYNATURALIZATION">% Citizen by Naturalization</option>
+      <option value="NOTAUSCITIZEN">Not A U.S Citizen</option>
+      <option value="PERCENTNOTAUSCITIZEN">% Not A U.S Citizen</option>
+      <option value="ENGLISHONLY">English Only Speaking Households</option>
+      <option value="ENGLISHPERCENT">% English Only Speaking Households</option>
+      <option value="SPANISH">Spanish Speaking Households</option>
+      <option value="SPANISHPERCENT">% Spanish Speaking Households</option>
+      <option value="LIMITEDENGLISHSPANISH">Limited English Spanish Speaking Households</option>
+      <option value="ARABIC">Arabic Speaking Households</option>
+      <option value="ARABICPERCENT">% Arabic Speaking Households</option>
+      <option value="LIMITEDENGLISHARABIC">Limited English Arabic Speaking Households</option>
+  </select>
+</div>
+</br>
+<div id="map"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-ajax@2.1.0/dist/leaflet.ajax.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.2/leaflet.css">
+<script src="./geojson/final.json"></script>
+<script src="./geojson/locations.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-choropleth@1.1.4/dist/choropleth.min.js"></script>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js" integrity="sha512-8BqQ2RH4L4sQhV41ZB24fUc1nGcjmrTA6DILV/aTPYuUzo+wBdYdp0fvQ76Sxgf36p787CXF7TktWlcxu/zyOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.min.css" integrity="sha512-fYyZwU1wU0QWB4Yutd/Pvhy5J1oWAwFXun1pt+Bps04WSe4Aq6tyHlT4+MHSJhD8JlLfgLuC4CbCnX5KHSjyCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" integrity="sha512-ENrTWqddXrLJsQS2A86QmvA17PkJ0GVm1bqj5aTgpeMAfDKN2+SIOLpKG8R/6KkimnhTb+VW5qqUHB/r1zaRgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+
+
+// Function to style each district
+function getColor(d) {
+    return d > 10 ? '#800026' :
+           d > 8  ? '#BD0026' :
+           d > 6  ? '#E31A1C' :
+           d > 4  ? '#FC4E2A' :
+           d > 2  ? '#FD8D3C' :
+                    '#FFEDA0';
+}
+
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.district),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
+  var map = null;
+  var legend = null;
+  var choropleth_map = null;
+  function rebuildChoroplethMap(metric,geojson,locations_geojson)
+  {
+      // Initialize the map
+
+    
+
+      if(map != null){
+        
+      map.eachLayer(function(layer){
+        map = map.removeLayer(layer);
+      });
+        map.off();
+        map.remove();
+        map.removeControl(legend);
+        choropleth_map.remove();
+        legend = null;
+        choropleth_map = null;
+        map = L.map('map').setView([44.3148, -85.6024], 7);
+      }else{
+        map = L.map('map').setView([44.3148, -85.6024], 7);
+      }
+ 
+      // Add a tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+     
+        choropleth_map = L.choropleth(geojson, {
+      valueProperty: metric,
+      scale: ['white', '#EC1F27'],
+      steps: 20,
+      mode: 'q',
+      style: {
+        color: '#000',
+        weight: 2,
+        fillOpacity: 0.8
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup('<h1>District ' + feature.properties.NAME + '</h1>'+
+          "<h2>Demographic Info</h2>"+
+          '<ul class="demographics">'+
+            "<li>Citizens Born In U.S: <b>"+feature.properties.CITIZENBORNINUS+"("+feature.properties.PERCENTCITIZENBORNINUS+"%)</b>"+"</li>"+
+            "<li>Citizens Born In Puerto Rico/Island Areas: <b>"+feature.properties.CITIZENBORNINPUERTORICOORUSISLANDAREAS+"("+feature.properties.PERCENTCITIZENBORNINPUERTORICOORUSISLANDAREAS+"%)</b>"+"</li>"+            
+            "<li>Citizens Born Abroad to American parent(s): <b>"+feature.properties.CITIZENBORNABROADOFAMERICANPARENTS+"("+feature.properties.PERCENTCITIZENBORNABROADOFAMERICANPARENTS+"%)</b>"+"</li>"+
+            "<li>Citizens By Naturalization: <b>"+feature.properties.CITIZENBYNATURALIZATION+"("+feature.properties.PERCENTCITIZENBYNATURALIZATION+"%)</b>"+"</li>"+
+            "<li>Not A U.S Citizen: <b>"+feature.properties.NOTAUSCITIZEN+"("+feature.properties.PERCENTNOTAUSCITIZEN+"%)</b>"+"</li>"+
+            "<li>English Only Speaking Households: <b>"+feature.properties.ENGLISHONLY+"("+feature.properties.ENGLISHPERCENT+"%)</b>"+"</li>"+
+            "<li>Spanish Speaking Households: <b>"+feature.properties.SPANISH+"("+feature.properties.SPANISHPERCENT+"%)</b>"+
+              "<ul>"+
+                "<li>Spanish Speaking Households That either don't speak English or limited English: <b>"+feature.properties.LIMITEDENGLISHSPANISH+"</b></li>"+
+                "<li>Spanish Speaking Households That <b>ARE NOT </b> a limited english household: <b>"+feature.properties.NOTALIMITEDENGLISHSPANISH+"</b></li>"+
+                "</ul>"+
+              "</li>"+
+            "<li>Arabic Speaking Households: <b>"+feature.properties.ARABIC+"("+feature.properties.ARABICPERCENT+"%)</b>"+              
+              "<ul>"+
+                "<li>Arabic Speaking Households That either don't speak English or limited English: <b>"+feature.properties.LIMITEDENGLISHARABIC+"</b></li>"+
+                "<li>Arabic Speaking Households That <b>ARE NOT </b> a limited english household: <b>"+feature.properties.NOTALIMITEDENGLISHARABIC+"</b></li>"+
+                "</ul>"+
+              "</li>"+
+            "</ul>"
+        )
+      }
+      }).addTo(map);
+      var markers = L.markerClusterGroup();
+      L.geoJSON(locations_geojson, {
+      onEachFeature: function(feature,layer){
+        if (feature.properties) {
+        var contacted = (feature.properties.Contacted == "Yes"? '<div style="display:inline; color: green">&#x2714</div>':'<div style="display:inline; color: red">&#x274C</div>');
+        var has_received = (feature.properties.Has_Received == "Yes"? '<div style="display:inline; color: green">&#x2714</div>':'<div style="display:inline; color: red">&#x274C</div>');
+
+        var marker_color =  null;
+        if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "Yes")
+        marker_color = "green";
+        else if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "No")
+        marker_color = "red";
+        else
+        marker_color = "gray";
+        var marker = L.AwesomeMarkers.icon({
+        icon: 'airplane',
+        prefix: 'ion',
+        iconColor: "white",
+        markerColor: marker_color
+        });
+
+        layer.setIcon(marker);
+        layer.bindPopup('<h1 style="color:black">'+feature.properties.Name+'</h1>'+
+        "<ul class='pop_ups'>"+
+          "<li><b>Address &#x1F3E0: "+feature.properties.Address+"</li></b>"+
+          "<li><b>Place &#x1F6A9: "+feature.properties.Place+"</li></b>"+
+          "<li><b>Contacted &#x1F4DE: "+contacted+" "+feature.properties.Contacted+"</li></b>"+
+          "<li><b>Has Received &#x1F4E2: "+has_received+" "+feature.properties.Has_Received+"</li></b>"+
+          "<li><b>Notes &#x1F4DD: "+feature.properties.Notes+"</li></b>"+
+          "</ul>");
+        }
+      }
+      }).addTo(map);
+
+      // markers.addTo(map);
+
+
+      // Add legend (don't forget to add the CSS from index.html)
+      legend = L.control({ position: 'bottomright' })
+      legend.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'info legend')
+      var limits = choropleth_map.options.limits
+      var colors = choropleth_map.options.colors
+      var labels = []
+      var dropdown = document.getElementById("dataset");
+      var selected_label = dropdown.options[dropdown.selectedIndex].textContent;
+      limits.forEach(function (limit, index) {
+        labels.push('<li class="legendli" style="background-color: ' + colors[index] + '">'+Number.parseFloat(limit.toFixed(2))+'</li>')
+      })
+
+      div.innerHTML += '<h4 class="legend-name">'+selected_label+'</h4> <ul class="legend-box">' + labels.join('') + '</ul>'
+      return div
+      }
+        legend.addTo(map);
+}
+
+  document.getElementById('dataset').addEventListener('change', function() {
+      rebuildChoroplethMap(this.value,districts,locations);
+  });
+  var dropdown = document.getElementById("dataset");
+  dropdown.value = "CITIZENBORNINUS";
+  rebuildChoroplethMap("CITIZENBORNINUS",districts,locations);
+
+</script>
+</body>
+</html>

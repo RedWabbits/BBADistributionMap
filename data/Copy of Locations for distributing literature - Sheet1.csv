@@ -1,0 +1,85 @@
+Name,Address,Place,Has Received?,Claimed,Notes,Contacted,Lat,Lon
+Mexico Town Bakery,"4300 Vernor Hwy, Detroit, MI 48209",Bakery,No,,They have a bulletin,No,42.32102462,-83.09515586
+Roti Max Bakery,"14430 Michigan Ave, Dearborn, MI 48126",Bakery,Yes,,Gave to cashier,Yes,42.32063137,-83.18310755
+Sheila's Bakery,"800 Perry St, Pontiac, MI 48342",Bakery,Yes,,,Yes,42.65867687,-83.2817903
+La Casa Amiga,"76 Williams St, Pontiac, MI 48341",Business,Yes,,,Yes,42.63562394,-83.29903638
+All Saints Episcopal Church,"171 W Pike St, Pontiac, MI 48341",Church,Yes,,,Yes,42.67378593,-83.280649
+Detroit Cavalry Spanish SDA,"1227 Cavalry St, Detroit, MI 48209",Church,No,,,No,42.31205528,-83.10271399
+First Baptish Spanish Church,"3495 Livernois, Detroit, MI 48210",Church,No,,,No,42.3361795,-83.1240762
+First Latin American Baptist Church,"2004 Scotten St, Detroit, MI 48209",Church,No,,,No,42.32271209,-83.09484326
+Fort Street Presbyterian Church,"631 W Fort St, Detroit, MI 48226",Church,No,,,No,42.32771365,-83.05383662
+Mariners' Church,"170 E Jefferson Ave, Detroit, MI 48226",Church,No,,,No,42.3293591,-83.04198247
+Motor City Church,"150 Michigan Ave, Detroit, MI 48226",Church,No,,,No,42.34490761,-83.05031625
+Old St. Mary's Catholic Church,"646 Monroe St, Detroit, MI 48226",Church,No,,,No,42.3363031,-83.04026772
+Sacred Heart Catholic Church,"1000 Eliot St, Detroit, MI 48207",Church,No,,,No,42.3525182,-83.04551956
+Santos Church,"1953 Military St, Detroit, MI 48209",Church,No,,,No,42.31663904,-83.10762484
+St Aloysius Parish,"1234 Washington Blvd, Detroit, MI 48226",Church,No,,,No,42.33942503,-83.04984821
+St Francis D'Assisi Church,"4500 Wesson St, Detroit, MI 48210",Church,No,,,No,42.33441086,-83.117502
+St Gabriel's Catholic Church,"8118 W, 8118 Vernor Hwy, Detroit, MI 48209",Church,No,,,No,42.35666153,-83.13146588
+St. Hedwig Catholic Church,"3245 Junction Ave, Detroit, MI 48210",Church,No,,,No,42.48244456,-83.1155372
+St. Joseph Shrine,"1828 Jay St, Detroit, MI 48207",Church,No,,,No,42.50981371,-83.09491024
+Templo el Calvario,"2101 Campbell St, Detroit, MI 48209",Church,No,,,No,42.31873793,-83.10510282
+The Cathedral Church of St. Paul,"4800 Woodward Ave, Detroit, MI 48201",Church,No,,,No,42.3568485,-83.06375922
+Woodside Bible CHurch,"80 W Alexandrine St, Detroit, MI 48201",Church,No,,,No,42.35575092,-83.06168196
+Club Caribbean,"15331 Fenkell Ave, Detroit, MI 48227",Club,No,,,No,42.41019918,-83.19843419
+Children's Hospital of Michigan,"3901 Beaubien Blvd, Detroit, MI 48201",Hospital,No,,,No,42.35183081,-83.05461197
+DMC Detroit Receiving Hospital,"4201 St Antoine, Detroit, MI 48201",Hospital,No,,,No,42.35357429,-83.05496536
+DMC Harper University Hospital,"3990 John R St, Detroit, MI 48201",Hospital,No,,,No,42.35199643,-83.05639157
+DMC Sinai Grace Hospital,"6071 Outer Dr W, Detroit, MI 48235",Hospital,No,,,No,42.41878856,-83.18216214
+Henry Ford Hospital,"2799 W Grand Blvd, Detroit, MI 48202",Hospital,No,,,No,42.36758264,-83.08534332
+Detroit Athletic Club,"241 Madison St, Detroit, MI 48226",Hotel,No,,Unite Here Local 24.,No,42.33772865,-83.04722301
+Greektown Casino,"1211 Chrysler Dr, Detroit, MI 48226",Hotel,No,,Unite Here Local 24. Casino managers can be very reactive.,No,42.33627791,-83.04001366
+Hilton Southfield,"26000 American Dr, Southfield, MI 48034",Hotel,No,,Unite Here Local 24.,No,42.49275329,-83.29962462
+MGM Casino,"1777 3rd Ave, Detroit, MI 48226",Hotel,No,,Unite Here Local 24. Casino managers can be very reactive.,No,42.37716023,-83.05470774
+Motorcity Casino,"2901 Grand River Ave, Detroit, MI 48201",Hotel,No,,Unite Here Local 24. Casino managers can be very reactive.,No,42.33903955,-83.06775635
+Westin Book Cadillac,"1114 Washington Blvd, Detroit, MI 48226",Hotel,No,,Unite Here Local 24. High Immigrant Population,No,42.33229882,-83.05027798
+Bowen Public Library,"3648 Vernor Hwy, Detroit, MI 48216",Library,No,,,No,42.32356977,-83.08904768
+Campbell Public Library,"8733 W Vernor Hwy, Detroit, MI 48209",Library,No,,,No,42.30909963,-83.13308769
+Chandler Park,"12800 Harper Ave, Detroit, MI 48213",Library,No,,,No,42.40192618,-82.97393362
+Chaney,"16101 Grand River Ave, Detroit, MI 48227",Library,No,,,No,42.39556388,-83.20528061
+Chase ,"17731 W Seven Mile Rd, Detroit, MI 48235",Library,No,,,No,42.42999775,-83.21787606
+Conely,"4600 Martin St, Detroit, MI 48210",Library,No,,,No,42.3320621,-83.12730708
+Detroit Public Library,"5201 Woodward Ave, Detroit, MI 48202",Library,No,,,No,42.35869702,-83.06682229
+Douglass,"3666 Grand River Ave, Detroit, MI 48208",Library,No,,,No,42.34334124,-83.07464828
+Duffield,"2507 W Grand Blvd, Detroit, MI 48208",Library,No,,,No,42.36333701,-83.09331186
+Edison,"18400 Joy Rd, Detroit, MI 48228",Library,No,,,No,42.3581958,-83.22052094
+Elmwood Park,"550 Chene St, Detroit, MI 48207",Library,No,,,No,42.34018575,-83.02341881
+Franklin,"13651 E McNichols Rd, Detroit, MI 48205",Library,No,,,No,42.42716143,-82.98408693
+Hubbard,"12929 W McNichols Rd, Detroit, MI 48235",Library,No,,,No,42.41653401,-83.17270318
+Jefferson,"12350 Outer Dr E, Detroit, MI 48224",Library,No,,,No,42.40428882,-82.93720283
+Knapp,"13330 Conant, Detroit, MI 48212",Library,No,,,No,42.41479589,-83.06036662
+Lincoln,"1221 Seven Mile E, Highland Park, MI 48203",Library,No,,,No,42.4329503,-83.09088719
+Parkman,"1766 Oakman Blvd, Detroit, MI 48238",Library,No,,,No,42.396871,-83.12741492
+Redford,"21200 Grand River Ave, Detroit, MI 48219",Library,No,,,No,42.41416383,-83.25003139
+Sherwood Forest,"7117 W Seven Mile Rd, Detroit, MI 48221",Library,No,,,No,42.43146859,-83.14432284
+Wilder,"7140 Seven Mile E, Detroit, MI 48234",Library,No,,,No,42.43378811,-83.03008154
+Arab American National Museum,"13624 Michigan Ave, Dearborn, MI 48126",Museum,Yes,,Added to Newstands,Yes,42.32240655,-83.17662269
+Centro Multicultural,"91 N Saginaw St, Pontiac, MI 48342",Non Profit,Yes,,,Yes,42.63982766,-83.29345354
+Detroit Hispanic Development,"1211 Trumbull, Detroit, MI 48216",Non Profit,No,,,No,42.32675574,-83.06382109
+Latino Family Services,"1145 Lawndale St, Detroit, MI 48209",Non Profit,No,,,No,42.3014286,-83.12738231
+DTW Airport Restaurants,"12999 John D Dingell Dr, Detroit, MI 48242",Restaurant,No,,Unite Here Local 24.,No,42.2148766,-83.34816245
+Haraz Coffee,"13810 Michigan Ave, Dearborn, MI 48126",Restaurant,Yes,,Left flyers with barista,Yes,42.32175473,-83.17864182
+La Feria,"4130 Cass Ave, Detroit, MI 48201",Restaurant,No,,,No,42.35037554,-83.06276539
+Sinbad's Restaurant,"100 St Clair St, Detroit, MI 48214",Restaurant,No,,Unite Here Local 24.,No,42.35787787,-82.97376925
+Liberty Bar,"85 N Saginaw St, Pontiac, MI 48342",Restaurant ,Yes,,,Yes,42.63952502,-83.29326871
+Sheeba,"13919 Michigan Ave, Dearborn, MI 48126",Restaurant ,Yes,,Gave to cashier,Yes,42.32110672,-83.17958298
+[Arabic] Convenience ,"13347 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Left some with cashier,Yes,42.32265874,-83.174235
+Algo Especial Super Market,"2628 Bagley St, Detroit, MI 48216",Store,No,,,No,42.32558522,-83.07864193
+Azal Computer Cellphone,"13234 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Gave to cashier,Yes,42.32337782,-83.1730314
+Azteca Supermercado,"2411 Central St, Detroit, MI 48209",Store,No,,,No,42.31382868,-83.12556757
+Carnival Market,"1101 Walton Blvd., Pontiac, MI 48340",Store,Yes,,,Yes,42.67923714,-83.26016663
+Convenience Store,"13255 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Left with Cashier,Yes,42.32287309,-83.17322112
+Dar Alhajar,"4940 Schaefer Rd, Dearborn, MI 48126",Store,Yes,,Left with Cashier,Yes,42.32341502,-83.1756966
+Dearborn Fresh Supermarket,"13661 Colson St, Dearborn, MI 48126",Store,Yes,,Left 3 flyers by newsstand,Yes,42.32449488,-83.17692813
+Dollar Land Plus Superstore,"5000 Schaefer Rd, Dearborn, MI 48126",Store,Yes,,Left with Cashier,Yes,42.32380977,-83.17586027
+E&L Supermercado,"6000 Vernor Hwy, Detroit, MI 48209",Store,No,,,No,42.31683394,-83.10619039
+Jungle Juice,"13252 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Left with Cashier,Yes,42.32324873,-83.1733165
+La Luna Supermercado,"7603 McGraw Ave, Detroit, MI 48210",Store,No,,,No,42.33581025,-83.14009074
+Red Eye Smoke Shop,"13254 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Left with Cashier,Yes,42.32318266,-83.17338539
+Rouh Perfumes,"4713 Horger St, Dearborn, MI 48126",Store,Yes,,Gave to reception,Yes,42.32151983,-83.17957733
+Sanaa Express Mart,"14227 Michigan Ave, Dearborn, MI 48126",Store,Yes,,,Yes,42.32063959,-83.18059867
+Save-a-lot,"1249 Baldwin Ave, Pontiac MI 48340",Store,No,,Was told to come back when manager is there,Yes,42.67153793,-83.3016826
+Sigma Phone Repairs,"13535 Michigan ave, Dearborn, MI 48126",Store,Yes,,Cashier took a handful,Yes,42.32222156,-83.1753799
+Sinbad Travel and Tours,"13912 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Gave to reception,Yes,42.32139259,-83.1795986
+The Suit Company and Clothing,"14207 Michigan Ave, Dearborn, MI 48126",Store,Yes,,Left arabic flyers,Yes,42.32073609,-83.18050795
+Tobey's Market,"5546 Chopin St, Detroit, MI 48210",Store,No,,,No,42.33688756,-83.13708942
