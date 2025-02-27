@@ -53,6 +53,10 @@
     .awesome-marker{
       opacity: 95%;
     }
+    h2{
+      color: black;
+      text-align: center;
+    }
 
     .nv-marker-cluster-medium{
         background-color: rgba(255, 255, 255, 0.6);
@@ -299,7 +303,7 @@ function addMarkersToSpecificCluster(geojson,marker_type,cluster){
         fillOpacity: 0.8
       },
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('<h1>District ' + feature.properties.NAME + '</h1>'+
+        layer.bindPopup('<h2>District ' + feature.properties.NAME + '</h2>'+
           "<h2>Demographic Info</h2>"+
           '<ul class="demographics">'+
             "<li>Citizens Born In U.S: <b>"+feature.properties.CITIZENBORNINUS+"("+feature.properties.PERCENTCITIZENBORNINUS+"%)</b>"+"</li>"+
