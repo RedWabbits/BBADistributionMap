@@ -53,6 +53,83 @@
     .awesome-marker{
       opacity: 95%;
     }
+
+    .nv-marker-cluster-medium{
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    .nv-marker-cluster-small{
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .nv-marker-cluster-large
+    {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    .rj-marker-cluster-small
+    {
+      background-color: rgba(248, 0, 0, 0.6);
+    }
+    .rj-marker-cluster-medium
+    {
+      background-color: rgba(248, 0, 0, 0.6);
+    }
+    .rj-marker-cluster-large
+    {
+      background-color: rgba(248, 0, 0, 0.6);
+    }
+
+    .ac-marker-cluster-small
+    {
+      background-color: rgba(9, 255, 0, 0.6);
+    }
+    .ac-marker-cluster-medium
+    {
+      background-color: rgba(9, 255, 0, 0.6);
+    }
+    .ac-marker-cluster-large
+    {
+      background-color: rgba(9, 255, 0, 0.6);
+    }
+
+
+    .nv-marker-cluster-medium div
+    {
+        background-color: rgba(126, 126, 126, 0.6);
+    }
+    .nv-marker-cluster-small div
+    {
+      background-color: rgba(126, 126, 126, 0.6);
+    }
+    .nv-marker-cluster-large div
+    {
+      background-color: rgba(126, 126, 126, 0.6);
+    }
+    .rj-marker-cluster-small div
+    {
+      background-color: rgba(146, 43, 43, 0.6);
+    }
+    .rj-marker-cluster-medium div
+    {
+      background-color: rgba(146, 43, 43, 0.6);
+    }
+    .rj-marker-cluster-large div
+    {
+      background-color: rgba(146, 43, 43, 0.6);
+    }
+
+    .ac-marker-cluster-small div
+    {
+      background-color: rgba(96, 238, 91, 0.6);
+    }
+    .ac-marker-cluster-medium div
+    {
+      background-color: rgba(96, 238, 91, 0.6);
+    }
+    .ac-marker-cluster-large div
+    {
+      background-color: rgba(96, 238, 91, 0.6);
+    }
+
+
     </style>
 </head>
 <body>
@@ -119,6 +196,67 @@ function style(feature) {
         fillOpacity: 0.7
     };
 }
+
+function addMarkersToSpecificCluster(geojson,marker_type,cluster){
+  L.geoJSON(geojson, {
+      filter: function(feature){
+        if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "Yes" && marker_type == 1)
+        {
+            return true;
+        }
+      else if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "No" && marker_type == 2)
+      {
+          return true;
+       }
+      else if (feature.properties.Contacted == "No" && feature.properties.Has_Received  == "No" && marker_type == 3)
+        {
+            return true;
+        }
+        else{
+          return false;
+        }
+      },
+      onEachFeature: function(feature,layer){
+
+      var contacted = (feature.properties.Contacted == "Yes"? '<div style="display:inline; color: green">&#x2714</div>':'<div style="display:inline; color: red">&#x274C</div>');
+      var has_received = (feature.properties.Has_Received == "Yes"? '<div style="display:inline; color: green">&#x2714</div>':'<div style="display:inline; color: red">&#x274C</div>');
+      var marker_type = 0;
+      var marker_color =  null;
+      if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "Yes")
+      {
+        marker_color = "green";
+        marker_type = 1;
+      }
+      else if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "No")
+      {
+        marker_color = "red";
+        marker_type = 2;
+      }
+      else
+      {
+        marker_color = "gray";
+        marker_type = 3;
+      }
+      var marker = L.AwesomeMarkers.icon({
+      icon: 'airplane',
+      prefix: 'ion',
+      iconColor: "white",
+      markerColor: marker_color
+      });
+      layer.setIcon(marker);
+      layer.bindPopup('<h1 style="color:black">'+feature.properties.Name+'</h1>'+
+      "<ul class='pop_ups'>"+
+        "<li><b>Address &#x1F3E0: "+feature.properties.Address+"</li></b>"+
+        "<li><b>Place &#x1F6A9: "+feature.properties.Place+"</li></b>"+
+        "<li><b>Contacted &#x1F4DE: "+contacted+" "+feature.properties.Contacted+"</li></b>"+
+        "<li><b>Has Received &#x1F4E2: "+has_received+" "+feature.properties.Has_Received+"</li></b>"+
+        "<li><b>Notes &#x1F4DD: "+feature.properties.Notes+"</li></b>"+
+        "</ul>");
+      
+      }   
+    }).addTo(cluster);
+}
+
   var map = null;
   var legend = null;
   var choropleth_map = null;
@@ -186,41 +324,66 @@ function style(feature) {
         )
       }
       }).addTo(map);
-      var markers = L.markerClusterGroup();
-      L.geoJSON(locations_geojson, {
-      onEachFeature: function(feature,layer){
-        if (feature.properties) {
-        var contacted = (feature.properties.Contacted == "Yes"? '<div style="display:inline; color: green">&#x2714</div>':'<div style="display:inline; color: red">&#x274C</div>');
-        var has_received = (feature.properties.Has_Received == "Yes"? '<div style="display:inline; color: green">&#x2714</div>':'<div style="display:inline; color: red">&#x274C</div>');
+      var rejected_markers = L.markerClusterGroup({
+        iconCreateFunction: function(cluster) {
+          var childCount = cluster.getChildCount();
 
-        var marker_color =  null;
-        if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "Yes")
-        marker_color = "green";
-        else if(feature.properties.Contacted == "Yes" && feature.properties.Has_Received  == "No")
-        marker_color = "red";
-        else
-        marker_color = "gray";
-        var marker = L.AwesomeMarkers.icon({
-        icon: 'airplane',
-        prefix: 'ion',
-        iconColor: "white",
-        markerColor: marker_color
-        });
+          var c = ' rj-marker-cluster-';
+          if (childCount < 10) {
+          c += 'small';
+          } else if (childCount < 100) {
+          c += 'medium';
+          } else {
+          c += 'large';
+          }
 
-        layer.setIcon(marker);
-        layer.bindPopup('<h1 style="color:black">'+feature.properties.Name+'</h1>'+
-        "<ul class='pop_ups'>"+
-          "<li><b>Address &#x1F3E0: "+feature.properties.Address+"</li></b>"+
-          "<li><b>Place &#x1F6A9: "+feature.properties.Place+"</li></b>"+
-          "<li><b>Contacted &#x1F4DE: "+contacted+" "+feature.properties.Contacted+"</li></b>"+
-          "<li><b>Has Received &#x1F4E2: "+has_received+" "+feature.properties.Has_Received+"</li></b>"+
-          "<li><b>Notes &#x1F4DD: "+feature.properties.Notes+"</li></b>"+
-          "</ul>");
+          return new L.DivIcon({ html: '<div><span>' + childCount + ' <span aria-label="markers"></span>' + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+        }
+      });
+      var accepted_markers = L.markerClusterGroup(
+        {
+        iconCreateFunction: function(cluster) {
+          var childCount = cluster.getChildCount();
+
+          var c = ' ac-marker-cluster-';
+          if (childCount < 10) {
+          c += 'small';
+          } else if (childCount < 100) {
+          c += 'medium';
+          } else {
+          c += 'large';
+          }
+
+          return new L.DivIcon({ html: '<div><span>' + childCount + ' <span aria-label="markers"></span>' + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
         }
       }
-      }).addTo(map);
+      );
+      var non_visited_markers = L.markerClusterGroup(
+        {
+        iconCreateFunction: function(cluster) {
+          var childCount = cluster.getChildCount();
 
-      // markers.addTo(map);
+          var c = ' nv-marker-cluster-';
+          if (childCount < 10) {
+          c += 'small';
+          } else if (childCount < 100) {
+          c += 'medium';
+          } else {
+          c += 'large';
+          }
+
+          return new L.DivIcon({ html: '<div><span>' + childCount + ' <span aria-label="markers"></span>' + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+        }
+      }
+      );
+
+      addMarkersToSpecificCluster(locations_geojson,1,accepted_markers);
+      addMarkersToSpecificCluster(locations_geojson,2,rejected_markers);
+      addMarkersToSpecificCluster(locations_geojson,3,non_visited_markers);
+
+      rejected_markers.addTo(map);
+      accepted_markers.addTo(map);
+      non_visited_markers.addTo(map);
 
 
       // Add legend (don't forget to add the CSS from index.html)
